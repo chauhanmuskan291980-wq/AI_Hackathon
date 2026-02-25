@@ -1,0 +1,14 @@
+version: "3.0"
+rules:
+- rule: Ask salary before checking ESIC
+  steps:
+  - intent: ask_esic
+  - action: utter_ask_salary
+
+- rule: Check ESIC after salary
+  steps:
+  - intent: inform_salary
+    entities:
+      - salary
+  - action: utter_salary_received
+  - action: action_check_esic

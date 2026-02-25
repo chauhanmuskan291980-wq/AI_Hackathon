@@ -1,0 +1,17 @@
+version: "3.0"
+nlu:
+- intent: inform_salary
+  examples: |
+    - my salary is [18000](salary)
+    - salary [25000](salary)
+    - I earn [21000](salary)
+    - [₹20000](salary)
+    - [18k](salary)
+    - [twenty thousand](salary)
+
+- intent: ask_esic
+  examples: |
+    - do I have ESIC
+    - am I eligible for ESIC
+    - is ESIC applicable to me
+    - tell me about ESIC eligibility

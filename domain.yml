@@ -1,0 +1,25 @@
+version: "3.0"
+
+intents:
+  - inform_salary
+  - ask_esic
+
+entities:
+  - salary
+
+slots:
+  salary:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: salary
+
+responses:
+  utter_ask_salary:
+    - text: "Can you tell me your salary?"
+  utter_salary_received:
+    - text: "Got it! Your salary is {salary}"
+
+actions:
+  - action_check_esic

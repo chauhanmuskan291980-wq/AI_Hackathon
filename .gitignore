@@ -1,0 +1,51 @@
+# Python compiled files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+evenuv/
+
+# Rasa models
+models/
+
+# Rasa logs and temporary files
+*.db
+*.sqlite
+*.log
+*.tmp
+
+credentials.yml
+endpoints.yml
+secrets.yml
+
+# Windows
+Thumbs.db
+.DS_Store
+
+# VSCode
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+evenuv/
+
+# Rasa
+models/
+*.db
+*.sqlite
+*.log
+*.tmp
+credentials.yml
+endpoints.yml
+secrets.yml
+
+# OS / Editor
+Thumbs.db
+.DS_Store
+.vscode/
+
+# Optional frontend
+node_modules/
+build/
+dist/

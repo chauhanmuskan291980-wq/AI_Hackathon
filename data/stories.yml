@@ -1,0 +1,13 @@
+version: "3.0"
+
+stories:
+
+- story: ask_esic flow
+  steps:
+  - intent: ask_esic
+  - action: utter_ask_salary
+
+- story: inform_salary flow
+  steps:
+  - intent: inform_salary
+  - action: action_check_esic
