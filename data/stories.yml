@@ -1,13 +1,9 @@
-version: "3.0"
+version: "3.1"
 
 stories:
 
-- story: ask_esic flow
+- story: ask esic flow
   steps:
   - intent: ask_esic
-  - action: utter_ask_salary
-
-- story: inform_salary flow
-  steps:
-  - intent: inform_salary
-  - action: action_check_esic
+  - action: esic_eligibility_form
+  - active_loop: esic_eligibility_form

@@ -1,0 +1,53 @@
+{
+  "text": {
+    "am": 1,
+    "i": 12,
+    "eligible": 8,
+    "for": 10,
+    "esic": 9,
+    "do": 5,
+    "have": 11,
+    "is": 13,
+    "applicable": 2,
+    "to": 21,
+    "me": 14,
+    "check": 3,
+    "eligibility": 7,
+    "my": 15,
+    "salary": 20,
+    "__number__": 0,
+    "earn": 6,
+    "yes": 23,
+    "yeah": 22,
+    "correct": 4,
+    "registered": 19,
+    "no": 16,
+    "not": 18,
+    "nope": 17
+  },
+  "intent": {
+    "ask_esic": 1,
+    "inform_salary": 3,
+    "affirm": 0,
+    "deny": 2
+  },
+  "response": null,
+  "action_name": {
+    "action_listen": 7,
+    "action_restart": 8,
+    "action_session_start": 10,
+    "action_default_fallback": 5,
+    "action_deactivate_loop": 2,
+    "action_revert_fallback_events": 9,
+    "action_default_ask_affirmation": 3,
+    "action_default_ask_rephrase": 4,
+    "action_two_stage_fallback": 11,
+    "action_unlikely_intent": 12,
+    "action_back": 0,
+    "action_extract_slots": 6,
+    "action_check_esic_eligibility": 1,
+    "esic_eligibility_form": 13
+  },
+  "action_text": null,
+  "intent_response_key": null
+}

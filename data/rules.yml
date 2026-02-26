@@ -1,14 +1,17 @@
-version: "3.0"
+version: "3.1"
+
 rules:
-- rule: Ask salary before checking ESIC
+
+- rule: Activate eligibility form
   steps:
   - intent: ask_esic
-  - action: utter_ask_salary
+  - action: esic_eligibility_form
+  - active_loop: esic_eligibility_form
 
-- rule: Check ESIC after salary
+- rule: Submit form
+  condition:
+  - active_loop: esic_eligibility_form
   steps:
-  - intent: inform_salary
-    entities:
-      - salary
-  - action: utter_salary_received
-  - action: action_check_esic
+  - action: esic_eligibility_form
+  - active_loop: null
+  - action: action_check_esic_eligibility

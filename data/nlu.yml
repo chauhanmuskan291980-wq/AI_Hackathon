@@ -1,17 +1,30 @@
-version: "3.0"
+version: "3.1"
+
 nlu:
-- intent: inform_salary
-  examples: |
-    - my salary is [18000](salary)
-    - salary [25000](salary)
-    - I earn [21000](salary)
-    - [₹20000](salary)
-    - [18k](salary)
-    - [twenty thousand](salary)
 
 - intent: ask_esic
   examples: |
-    - do I have ESIC
     - am I eligible for ESIC
+    - do I have ESIC
     - is ESIC applicable to me
-    - tell me about ESIC eligibility
+    - check ESIC eligibility
+
+- intent: inform_salary
+  examples: |
+    - my salary is [18000](salary)
+    - I earn [25000](salary)
+    - [21000](salary)
+    - salary [20000](salary)
+
+- intent: affirm
+  examples: |
+    - yes
+    - yeah
+    - correct
+    - registered
+
+- intent: deny
+  examples: |
+    - no
+    - not registered
+    - nope

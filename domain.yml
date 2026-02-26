@@ -1,25 +1,44 @@
-version: "3.0"
+version: "3.1"
 
 intents:
-  - inform_salary
   - ask_esic
+  - inform_salary
+  - affirm
+  - deny
 
 entities:
   - salary
 
 slots:
   salary:
-    type: text
-    influence_conversation: false
+    type: float
     mappings:
       - type: from_entity
         entity: salary
 
+  employer_registered:
+    type: bool
+    mappings:
+      - type: from_intent
+        intent: affirm
+        value: true
+      - type: from_intent
+        intent: deny
+        value: false
+
+forms:
+  esic_eligibility_form:
+    required_slots:
+      - salary
+      - employer_registered
+
 responses:
+
   utter_ask_salary:
-    - text: "Can you tell me your salary?"
-  utter_salary_received:
-    - text: "Got it! Your salary is {salary}"
+    - text: "What is your monthly salary?"
+
+  utter_ask_employer_registered:
+    - text: "Is your employer registered under ESIC? (Yes/No)"
 
 actions:
-  - action_check_esic
+  - action_check_esic_eligibility
